@@ -768,6 +768,12 @@ public class AmmoType extends EquipmentType {
         acAmmos.add(base);
         EquipmentType.addType(base);
         base = AmmoType.createISAC5Ammo();
+        EquipmentType.addType(base);
+        base = AmmoType.createISAC5AmmoQuarter();
+        EquipmentType.addType(base);
+        base = AmmoType.createISAC5AmmoHalf();
+        EquipmentType.addType(base);
+        base = AmmoType.createISAC5AmmoThreeQuarter();
         acAmmos.add(base);
         EquipmentType.addType(base);
         base = AmmoType.createISAC10Ammo();
@@ -4203,6 +4209,96 @@ public class AmmoType extends EquipmentType {
         return ammo;
     }
 
+    private static AmmoType createISAC5AmmoQuarter() {
+        AmmoType ammo = new AmmoType();
+
+        ammo.name = "AC/5 Ammo Quarter";
+        ammo.shortName = "AC/5 Quarter";
+        ammo.setInternalName("IS Ammo AC/5 Quarter");
+        ammo.addLookupName("ISAC5 Ammo Quarter");
+        ammo.addLookupName("IS Autocannon/5 Ammo Quarter");
+        ammo.damagePerShot = 1;
+        ammo.rackSize = 5;
+        ammo.ammoType = AmmoType.T_AC;
+        ammo.shots = 5;
+        ammo.bv = 2.25;
+        ammo.cost = 1125;
+        ammo.tonnage = 0.25;
+        ammo.rulesRefs = "207, TM";
+        ammo.techAdvancement.setTechBase(TECH_BASE_ALL)
+              .setIntroLevel(false)
+              .setTechRating(RATING_B)
+              .setAvailability(RATING_C, RATING_C, RATING_D, RATING_D)
+              .setISAdvancement(2240, 2250, 2255, DATE_NONE, DATE_NONE)
+              .setISApproximate(false, false, false, false, false)
+              .setClanAdvancement(2240, 2250, 2255, 2850, DATE_NONE)
+              .setClanApproximate(false, false, false, true, false)
+              .setPrototypeFactions(F_TA)
+              .setProductionFactions(F_TA)
+              .setStaticTechLevel(SimpleTechLevel.EXPERIMENTAL);
+        return ammo;
+    }
+
+    private static AmmoType createISAC5AmmoHalf() {
+        AmmoType ammo = new AmmoType();
+
+        ammo.name = "AC/5 Ammo Half";
+        ammo.shortName = "AC/5 Half";
+        ammo.setInternalName("IS Ammo AC/5 Half");
+        ammo.addLookupName("ISAC5 Ammo Half");
+        ammo.addLookupName("IS Autocannon/5 Ammo Half");
+        ammo.damagePerShot = 1;
+        ammo.rackSize = 5;
+        ammo.ammoType = AmmoType.T_AC;
+        ammo.shots = 10;
+        ammo.bv = 4.5;
+        ammo.cost = 2250;
+        ammo.tonnage = 0.5;
+        ammo.rulesRefs = "207, TM";
+        ammo.techAdvancement.setTechBase(TECH_BASE_ALL)
+              .setIntroLevel(false)
+              .setTechRating(RATING_B)
+              .setAvailability(RATING_C, RATING_C, RATING_D, RATING_D)
+              .setISAdvancement(2240, 2250, 2255, DATE_NONE, DATE_NONE)
+              .setISApproximate(false, false, false, false, false)
+              .setClanAdvancement(2240, 2250, 2255, 2850, DATE_NONE)
+              .setClanApproximate(false, false, false, true, false)
+              .setPrototypeFactions(F_TA)
+              .setProductionFactions(F_TA)
+              .setStaticTechLevel(SimpleTechLevel.EXPERIMENTAL);
+        return ammo;
+    }
+
+    private static AmmoType createISAC5AmmoThreeQuarter() {
+        AmmoType ammo = new AmmoType();
+
+        ammo.name = "AC/5 Ammo Three Quarter";
+        ammo.shortName = "AC/5 Three Quarter";
+        ammo.setInternalName("IS Ammo AC/5 Three Quarter");
+        ammo.addLookupName("ISAC5 Ammo Three Quarter");
+        ammo.addLookupName("IS Autocannon/5 Ammo Three Quarter");
+        ammo.damagePerShot = 1;
+        ammo.rackSize = 5;
+        ammo.ammoType = AmmoType.T_AC;
+        ammo.shots = 15;
+        ammo.bv = 6.75;
+        ammo.cost = 3375;
+        ammo.tonnage = 0.75;
+        ammo.rulesRefs = "207, TM";
+        ammo.techAdvancement.setTechBase(TECH_BASE_ALL)
+              .setIntroLevel(false)
+              .setTechRating(RATING_B)
+              .setAvailability(RATING_C, RATING_C, RATING_D, RATING_D)
+              .setISAdvancement(2240, 2250, 2255, DATE_NONE, DATE_NONE)
+              .setISApproximate(false, false, false, false, false)
+              .setClanAdvancement(2240, 2250, 2255, 2850, DATE_NONE)
+              .setClanApproximate(false, false, false, true, false)
+              .setPrototypeFactions(F_TA)
+              .setProductionFactions(F_TA)
+              .setStaticTechLevel(SimpleTechLevel.EXPERIMENTAL);
+        return ammo;
+    }
+
     private static AmmoType createISAC10Ammo() {
         AmmoType ammo = new AmmoType();
 
@@ -4227,7 +4323,8 @@ public class AmmoType extends EquipmentType {
               .setClanAdvancement(2443, 2460, 2465, 2850, DATE_NONE)
               .setClanApproximate(false, false, false, true, false)
               .setPrototypeFactions(F_TH)
-              .setProductionFactions(F_TH);
+              .setProductionFactions(F_TH)
+              .setStaticTechLevel(SimpleTechLevel.EXPERIMENTAL);
         return ammo;
     }
 
